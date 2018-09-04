@@ -1,0 +1,5 @@
+Flask
+Pymongo
+Mongo
+requests
+wtforms

@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<h1>Rentals</h1>
+
+	<hr>
+	<table class="table table-striped">
+		<tr>
+			<td></td>
+			<td>
+				<form action="/fetch" method="POST">
+					<input type="text" name="fetch">
+					<input type="submit" name="fetch_submit" value="Fetch">
+				</form>
+			</td>
+			<td><a class="btn btn-default" href="/reload">Reload</a></td>
+			<td></td>
+			<td>
+				<form method="POST" action="/find">
+					Column: <input type="text" name="find_col"><br>
+					Value: <input type="text" name="find"><br>
+					Order: <input type="text" name="order"><br>
+					<input type="submit" name="find_submit" value="Find">
+				</form>
+			</td>
+			<td></td>
+			<td><a class="btn btn-success" href="add_rental">Add</a></td>
+		</tr>
+		<tr>
+			<th>Destination</th>
+			<th>Name</th>
+			<th>Guest number</th>
+			<th>Price</th>
+			<th>Amenities</th>
+			<th></th>
+			<th></th>
+		</tr>
+		{% for rental in rentals %}
+			<tr>
+				<td>{{rental.destination}}</td>
+				<td>{{rental.name}}</td>
+				<td>{{rental.guest_number}}</td>
+				<td>{{rental.price}}</td>
+				<td>{{rental.amenities}}</td>
+				<td><a href="/edit_rental/{{rental.name}}" class="btn btn-default pull-right"> Edit</td>
+				<td>
+					<form action="{{url_for('delete', name = rental.name)}}" method="POST">
+						<input type="hidden" name="method" value="DELETE">
+						<input type="submit" value="Delete" class="btn btn-danger">
+					</form>
+				</td>
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}
