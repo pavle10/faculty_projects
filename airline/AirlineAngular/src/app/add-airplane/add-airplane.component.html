@@ -1,0 +1,43 @@
+<h2>Dodavanje aviona</h2>
+<form>
+  <table>
+    <tr>
+      <td>Registracija:</td>
+      <td><input type="text" name="regnum" id="regnum" required></td>
+    </tr>
+    <tr>
+      <td>Brend:</td>
+      <td><input type="text" name="brand" id="brand" required></td>
+    </tr>
+    <tr>
+      <td>Model:</td>
+      <td><input type="text" name="model" id="model" required></td>
+    </tr>
+    <tr>
+      <td>Broj mesta:</td>
+      <td><input type="text" name="seatnum" id="seatnum" required></td>
+    </tr>
+    <tr>
+      <td>Broj kolona:</td>
+      <td><input type="text" name="cols" id="cols" required></td>
+    </tr>
+    <tr>
+      <td>Broj redova:</td>
+      <td><input type="text" name="rows" id="rows" required></td>
+    </tr>
+    <tr>
+      <td>Broj mesta u koloni:</td>
+      <td><input type="text" name="colsnum" id="colsnum" required></td>
+    </tr>
+    <tr>
+      <td>Distanca letenja:</td>
+      <td><input type="text" name="distance" id="distance" required></td>
+    </tr>
+    <tr>
+      <td>Max brzina:</td>
+      <td><input type="text" name="speed" id="speed" required></td>
+    </tr>
+  </table>
+</form>
+<button (click)="addAirplane()" type="submit">Dodaj</button><br>
+<button (click)="back()" type="submit">Nazad</button><br>

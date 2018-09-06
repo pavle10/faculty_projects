@@ -1,0 +1,19 @@
+<h3>Statistika</h3>
+<table>
+  <tr>
+    <td>Id korisnika:</td>
+    <td><input type="text" name="userId" id="userId"></td>
+    <td><button (click)="getHistory()">Prikazi</button></td>
+  </tr>
+  <tr>
+    <td>Broj leta:</td>
+    <td><input type="text" name="fnumber" id="fnumber"></td>
+    <td><button (click)="getFlightStat()">Prikazi</button></td>
+  </tr>
+  <tr>
+    <td>Registracioni broj:</td>
+    <td><input type="text" name="anumber" id="anumber"></td>
+    <td><button (click)="getAirplaneStat()">Prikazi</button></td>
+  </tr>
+</table>
+<button (click)="back()" type="submit">Nazad</button><br>

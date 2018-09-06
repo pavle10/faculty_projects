@@ -1,0 +1,23 @@
+<h3>Vadjenje boarding karte</h3>
+<table>
+  <tr>
+    <td>Ime:</td>
+    <td><input type="text" name="fname" id="fname" required></td>
+  </tr>
+  <tr>
+    <td>Prezime:</td>
+    <td><input type="text" name="lname" id="lname" required></td>
+  </tr>
+  <tr>
+    <td>JMBG:</td>
+    <td><input type="text" name="jmbg" id="jmbg" required></td>
+  </tr>
+</table>
+<table id="seats" name="seats">
+  <tr *ngFor="let i of rowsA">
+    <td *ngFor="let j of colsA" id="{{seats[i.i][j.i].id}}" class="{{seats[i.i][j.i].cls}}"
+      (click)="board(seats[i.i][j.i].id)"></td>
+  </tr>
+
+</table>
+<button (click)="back()" type="submit">Nazad</button><br>

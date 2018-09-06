@@ -1,0 +1,14 @@
+<h2>Cenovnik:</h2>
+<div>
+  <table>
+    <tr>
+      <th>Broj leta</th>
+      <th>Cena</th>
+    </tr>
+    <tr *ngFor="let price of prices">
+      <td>{{price.fnumber}}</td>
+      <td>{{price.price}}</td>
+     </tr>
+  </table>
+</div>
+<button (click)="back()" type="submit">Nazad</button><br>

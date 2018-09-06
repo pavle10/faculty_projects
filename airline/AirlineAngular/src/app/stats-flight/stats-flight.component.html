@@ -1,0 +1,13 @@
+<h2>Pregled statistike leta.</h2><br><br>
+<h4>Broj: {{fnumberId}}</h4>
+<h4>Id aviona: {{flightStats[0].airplaneId}}</h4>
+<h4>Polaziste: {{flightStats[0].fromDest}}</h4>
+<h4>Odrediste: {{flightStats[0].toDest}}</h4>
+<h4>Vreme polaska: {{flightStats[0].depDate | date : 'yyyy-MM-dd h:mm'}}</h4>
+<h4>Vreme dolaska: {{flightStats[0].arrDate | date : 'yyyy-MM-dd h:mm'}}</h4>
+<h4>Razdaljina: {{flightStats[0].distance}}</h4>
+<h4>Trajanje leta: {{flightStats[0].fTime}}</h4>
+<h4>Gate: {{flightStats[0].gate}}</h4>
+<h4>Trenutan broj putnika: {{flightStats[0].numOfPass}}</h4>
+
+<button (click)="back()" type="submit">Nazad</button><br>

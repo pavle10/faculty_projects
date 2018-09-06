@@ -1,0 +1,47 @@
+<h2>Dodavanje leta</h2>
+<form>
+  <table>
+    <tr>
+      <td>Broj:</td>
+      <td><input type="text" name="number" id="number" required></td>
+    </tr>
+    <tr>
+      <td>Polaziste:</td>
+      <td>
+        <select name="ddest" id="ddest">
+          <option *ngFor="let dest of destinations" [value]="dest.code">{{dest.city}}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Odrediste:</td>
+      <td>
+        <select name="adest" id="adest">
+          <option *ngFor="let destin of destinations" [value]="destin.code">{{destin.city}}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Datum polaska:</td>
+      <td><input type="date" name="date" id="date" required></td>
+    </tr>
+    <tr>
+      <td>Vreme polaska:</td>
+      <td><input type="text" name="time" id="time" required></td>
+    </tr>
+    <tr>
+      <td>Razdaljina:</td>
+      <td><input type="text" name="distance" id="distance" required></td>
+    </tr>
+    <tr>
+      <td>Avion:</td>
+      <td>
+        <select name="airplane" id="airplane">
+          <option *ngFor="let air of airplanes" [value]="air.id">{{air.registration}}</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</form>
+<button (click)="addFlight()" type="submit">Dodaj</button><br>
+<button (click)="back()" type="submit">Nazad</button><br>

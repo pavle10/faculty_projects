@@ -1,0 +1,13 @@
+<h3>Korisnik: {{currUser}}</h3>
+<h3>Opcije Operatera:</h3>
+<ul>
+  <li routerLink="/addAirplane">Dodaj avion</li>
+  <li routerLink="/removeAirplane">Obrisi avion</li>
+  <li routerLink="/addDestination">Dodaj destinaciju</li>
+  <li routerLink="/removeDestination">Obrisi destinaciju</li>
+  <li routerLink="/addFlight">Dodaj let</li>
+  <li routerLink="/removeFlight">Obrisi let</li>
+  <li routerLink="/pricelist">Cenovnik</li>
+  <li routerLink="/stats">Statistika</li>
+  <button (click)="logout()" type="submit">Logout</button><br>
+</ul>

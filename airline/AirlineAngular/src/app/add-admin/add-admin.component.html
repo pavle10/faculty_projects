@@ -1,0 +1,28 @@
+<h2>Formular:</h2>
+<form>
+  <table>
+    <tr>
+      <td>Ime:</td>
+      <td><input type="text" name="fname" id="fname" required></td>
+    </tr>
+    <tr>
+      <td>Prezime:</td>
+      <td><input type="text" name="lname" id="lname" required></td>
+    </tr>
+    <tr>
+      <td>Username:</td>
+      <td><input type="text" name="username" id="username" required></td>
+    </tr>
+    <tr>
+      <td>Tip:</td>
+      <td>
+        <select name="type" id="type">
+          <option value="1">Admin</option>
+          <option value="2">Operater</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</form>
+<button (click)="addAdmin()" type="submit">Dodaj</button><br>
+<button (click)="back()" type="submit">Nazad</button><br>

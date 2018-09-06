@@ -1,0 +1,24 @@
+<h2>Pregled istorije korisnika.</h2><br><br>
+<h4>Ime: {{name}}</h4>
+<h4>Email: {{email}}</h4>
+<hr>
+<h4>Predjena razdaljina: {{totalDistance}}</h4>
+<div>
+  <table>
+    <tr>
+      <th>Destinacija</th>
+      <th>Sediste(red)</th>
+      <th>Sediste(kolona)</th>
+      <th>Datum i vreme</th>
+      <th>Cena</th>
+    </tr>
+    <tr *ngFor="let h of history">
+      <td>{{h.destination}}</td>
+      <td>{{h.srow}}</td>
+      <td>{{h.scol}}</td>
+      <td>{{h.fdate | date : 'yyyy-MM-dd h:mm'}}</td>
+      <td>{{h.price}}</td>
+     </tr>
+  </table>
+</div>
+<button (click)="back()" type="submit">Nazad</button><br>

@@ -1,0 +1,20 @@
+<h2>Vase karte:</h2>
+<div>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Broj leta</th>
+      <th>Broj karata</th>
+      <th>Cena</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let ticket of tickets">
+      <td id="{{ticket.id}}">{{ticket.id}}</td>
+      <td>{{ticket.flightnumber}}</td>
+      <td>{{ticket.number}}</td>
+      <td>{{ticket.price}}</td>
+      <td><button (click)="chooseTicket(ticket.id)" type="submit">Izaberi</button></td>
+    </tr>
+  </table>
+</div>
+<button (click)="back()" type="submit">Nazad</button><br>

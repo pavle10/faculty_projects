@@ -1,0 +1,23 @@
+<h2>Dodavanje destinacije!</h2>
+<form>
+  <table>
+    <tr>
+      <td>Kod:</td>
+      <td><input type="text" name="code" id="code" required></td>
+    </tr>
+    <tr>
+      <td>Grad:</td>
+      <td><input type="text" name="city" id="city" required></td>
+    </tr>
+    <tr>
+      <td>Drzava:</td>
+      <td><input type="text" name="country" id="country" required></td>
+    </tr>
+    <tr>
+      <td>Vremenska zona:</td>
+      <td><input type="text" name="timezone" id="timezone" required></td>
+    </tr>
+  </table>
+</form>
+<button (click)="addDest()" type="submit">Dodaj</button><br>
+<button (click)="back()" type="submit">Nazad</button><br>

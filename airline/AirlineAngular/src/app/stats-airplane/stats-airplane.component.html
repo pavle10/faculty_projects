@@ -1,0 +1,24 @@
+<h2>Pregled statistike aviona.</h2><br><br>
+<h3>Podaci</h3>
+<h4>Reg. broj: {{airplaneStats[0].registration}}</h4>
+<h4>Brend: {{airplaneStats[0].brand}}</h4>
+<h4>Model: {{airplaneStats[0].model}}</h4>
+<h4>Br. sedista: {{airplaneStats[0].numOfSeats}}</h4>
+<h4>Br. redova: {{airplaneStats[0].rows}}</h4>
+<h4>Br. kolona: {{airplaneStats[0].cols}}</h4>
+<h4>Br. mesta po koloni: {{airplaneStats[0].numCols}}</h4>
+<h4>Razdaljina: {{airplaneStats[0].flyDistance}}</h4>
+<h4>Brzina: {{airplaneStats[0].speed}}</h4>
+<br>
+<h3>Letovi:</h3>
+<table>
+  <tr>
+    <th>Broj leta</th>
+    <th>Broj putnika</th>
+  </tr>
+  <tr *ngFor="let air of airplaneStats">
+    <td>{{air.flightNumber}}</td>
+    <td>{{air.numOfPass}}</td>
+  </tr>
+</table>
+<button (click)="back()" type="submit">Nazad</button><br>

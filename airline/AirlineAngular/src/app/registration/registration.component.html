@@ -1,0 +1,27 @@
+<h2>Registraciona forma:</h2>
+<form>
+  <table>
+    <tr>
+      <td>Ime:</td>
+      <td><input type="text" name="fname" id="fname" required></td>
+    </tr>
+    <tr>
+      <td>Prezime:</td>
+      <td><input type="text" name="lname" id="lname" required></td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td><input type="text" name="email" id="email" required></td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td><input type="password" name="password" id="password" required></td>
+    </tr>
+    <tr>
+      <td>Ponovite password:</td>
+      <td><input type="password" name="cpassword" id="cpassword" required></td>
+    </tr>
+  </table>
+</form>
+<button (click)="register()" type="submit">Registruj se</button><br>
+<a routerLink="/">Nazad</a>
